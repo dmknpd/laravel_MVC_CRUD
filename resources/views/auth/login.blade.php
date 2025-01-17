@@ -1,6 +1,6 @@
 <x-layout>
 
-    <h1 class="font-bold text-4xl text-center mb-20">Create Plant</h1>
+    <h1 class="font-bold text-4xl text-center mb-20">Login User</h1>
 
     <div class="max-w-[50%] mx-auto">
         <form action="/login" method="POST">
