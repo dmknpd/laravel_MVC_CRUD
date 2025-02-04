@@ -11,17 +11,20 @@
 
 <body class="bg-emerald-900 text-white/80 px-10 py-1">
 
-    <nav class="flex justify-between font-bold">
+    <nav class="relative flex items-center justify-between font-bold px-4">
+
         <x-link href="/">logo</x-link>
 
-        <div class="space-x-20">
+
+        <div class="absolute left-1/2 transform -translate-x-1/2 flex space-x-20">
             <x-link href="/">Plants</x-link>
             <x-link href="#">Seeds</x-link>
             <x-link href="#">Contacts</x-link>
         </div>
 
+
         @auth
-            <div class="space-x-5">
+            <div class="flex space-x-5">
                 <x-link href="/plants/create">Add plant</x-link>
                 <form class="inline" action="/logout" method="POST">
                     @csrf
@@ -31,8 +34,9 @@
             </div>
         @endauth
 
+
         @guest
-            <div class="space-x-5">
+            <div class="flex space-x-5">
                 <x-link href="/login">Log In</x-link>
                 <x-link href="/register">Sign In</x-link>
             </div>
